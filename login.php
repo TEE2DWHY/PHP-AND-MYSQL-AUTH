@@ -39,7 +39,7 @@
                 <input type="password" name="password" placeholder="Enter Password" required />
             </div>
             <!-- Forgot Password -->
-            <a href="./forgot-password.html">
+            <a href="#">
                 <div class="forgot-password">Forgot Password?</div>
             </a>
             <!-- Login Button -->
