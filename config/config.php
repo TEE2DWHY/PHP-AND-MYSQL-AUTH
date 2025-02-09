@@ -1,9 +1,8 @@
 <?php
-// Configuration for database connection
-$host = "localhost"; // MySQL host (use "localhost:8888" if your MySQL server is running on port 8888)
-$db_user = "root";   // MySQL username (usually "root" for local server)
-$db_pass = "root";       // MySQL password (empty by default for "root" user on local server)
-$db_name = "localhost_project";   // Database name
+$host = "localhost";
+$db_user = "root";
+$db_pass = "root";
+$db_name = "localhost_project";
 
 try {
     // Create a new PDO connection

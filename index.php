@@ -14,7 +14,7 @@ require_once("config/config.php");
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/index.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
   <title>My LocalHost App</title>
@@ -22,7 +22,7 @@ require_once("config/config.php");
 
 <body>
   <?php
-  include("./registration.php")
+  include("./functions/register.php")
     ?>
   <h1>My LocalHost App</h1>
   <!-- Signup Container -->
@@ -73,7 +73,7 @@ require_once("config/config.php");
       <!-- Login -->
       <p class="login">
         Already have an account?
-        <a href="./login.html"><span class="login-text">Login.</span></a>
+        <a href="./login.php"><span class="login-text">Login.</span></a>
       </p>
     </form>
   </div>

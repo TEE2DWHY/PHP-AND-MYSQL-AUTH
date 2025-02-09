@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background: rgba(0, 148, 136, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.home {
+  font-size: 14px;
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 9px;
+  width: 400px;
+  padding: 10px 40px;
+}
+
+.login-header {
+  margin: 30px 0;
+  text-align: center;
+  font-weight: 900;
+}
+
+.input-headers {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin: 25px 0 0 0;
+}
+
+input {
+  width: 100%;
+  margin: 0;
+  padding: 10px 15px;
+  opacity: 0.8;
+}
+
+input:focus {
+  transition: all 2s ease-in;
+  background-color: rgba(0, 148, 136, 0.13);
+  color: #000;
+}
+
+.forgot-password {
+  margin: 30px 0;
+  text-align: center;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.login-button {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #1b1b1b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.login-button:hover {
+  transition: all 2s ease-in;
+  background-color: #299c9c;
+  color: #fff;
+}
+
+.hide-button-text {
+  display: none;
+}
+
+.loading {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #fff;
+  animation: spin 1s linear infinite;
+  margin: auto;
+  display: none;
+}
+
+.show-loading {
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.err {
+  color: rgb(250, 64, 64);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.sign-up {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.sign-up-text {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 1200px) {
+  /* Mobile */
+  @media (max-width: 1200px) {
+    body {
+      padding: 0 10px;
+    }
+
+    form {
+      margin-top: -90px;
+      width: 100%;
+      padding: 10px 60px;
+    }
+  }
+}
