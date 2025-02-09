@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    <?php
+    include("./functions/signin.php")
+        ?>
     <!-- Login Container -->
     <div class="login">
         <h1>My LocalHost App</h1>

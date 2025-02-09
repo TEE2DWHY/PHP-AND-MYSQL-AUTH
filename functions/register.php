@@ -1,4 +1,6 @@
 <?php
+require_once("config/config.php");
+
 if (isset($_POST["submit"])) {
     $fullName = trim($_POST["fullName"]);
     $email = trim($_POST["email"]);
