@@ -1,6 +1,5 @@
 <?php
 if (isset($_POST["submit"])) {
-    // Getting form values
     $fullName = trim($_POST["fullName"]);
     $email = trim($_POST["email"]);
     $password = $_POST["password"];
@@ -9,26 +8,22 @@ if (isset($_POST["submit"])) {
     $errorMessage = '';
     $successMessage = '';
 
-    // Check if fields are empty
     if (empty($fullName) || empty($email) || empty($password) || empty($confirmPassword)) {
         $errorMessage = 'All fields are required.';
-    }
-    // Check if passwords match
-    elseif ($password !== $confirmPassword) {
+    } elseif ($password !== $confirmPassword) {
         $errorMessage = 'Passwords do not match.';
     } else {
-        // Hash the password before saving it
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        // Insert into the database (make sure your database columns are correct)
         try {
-            $sql = "INSERT INTO users (fullname, email, password) VALUES(?, ?, ?)";
+            $sql = "INSERT INTO users (fullname, email, password) 
+                    VALUES(:fullName, :email, :password)";
             $stmt = $db->prepare($sql);
 
-            // Bind the values to the prepared statement
-            $stmt->bindParam(1, $fullName);
-            $stmt->bindParam(2, $email);
-            $stmt->bindParam(3, $hashedPassword);
+            // Bind the values to the named placeholders
+            $stmt->bindParam(':fullName', $fullName);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':password', $hashedPassword);
 
             // Execute the statement
             $result = $stmt->execute();
@@ -39,7 +34,6 @@ if (isset($_POST["submit"])) {
                 $errorMessage = "Registration Failed. Please try again later.";
             }
         } catch (PDOException $e) {
-            // Catch and display error if database connection or execution fails
             $errorMessage = "Error: " . $e->getMessage();
         }
     }

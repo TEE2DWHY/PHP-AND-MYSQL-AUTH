@@ -48,7 +48,7 @@
             <!-- Sign up -->
             <div class="sign-up">
                 Don't have an account?
-                <a href="./signup.html"><span class="sign-up-text">Sign Up</span></a>
+                <a href="./index.php"><span class="sign-up-text">Sign Up</span></a>
             </div>
         </form>
     </div>
