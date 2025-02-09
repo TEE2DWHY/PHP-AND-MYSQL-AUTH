@@ -23,7 +23,7 @@
     <div class="login">
         <h1>My LocalHost App</h1>
         <!-- Form -->
-        <form>
+        <form method="post">
             <h2 class="login-header">Login</h2>
             <!-- Email -->
             <div>

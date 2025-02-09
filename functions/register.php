@@ -25,11 +25,14 @@ if (isset($_POST["submit"])) {
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $hashedPassword);
 
-            // Execute the statement
             $result = $stmt->execute();
 
             if ($result) {
-                $successMessage = 'Registration successful! Please check your email for verification.';
+                echo "<script type='text/javascript'>
+                    alert('Registration is successful!');
+                    window.location.href = './login.php'; // Redirect after alert
+                       </script>";
+                // header("Location: ./login.php");
             } else {
                 $errorMessage = "Registration Failed. Please try again later.";
             }
